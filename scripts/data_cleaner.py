@@ -35,10 +35,10 @@ class CleanerCSV():
         
         def del_dupe():
 
-            #dropping all dupe rows, keeping first ones from the copies
+            #dropping all dupe rows, keeping the first ones from the copies
             self.df = self.df.drop_duplicates(keep = "first")
 
-            #after deleted all dupes, immediately assigning columns from first row to have it as a header
+            #after deleting all dupes, immediately assigning columns from first row to have it as a header
             self.df.columns = self.df.iloc[0]
 
             #reassigning the dataframe from 1st row on to not repeat the header row
